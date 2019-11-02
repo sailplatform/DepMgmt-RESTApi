@@ -1,5 +1,6 @@
 package rest;
 
+import math.NumSequence;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -10,13 +11,10 @@ public class NumSequenceController {
 
     public static final String WELCOME_MESSAGE = "Welcome to Dependency Management Section!";
     private static final String INVALID_NUMBER_INPUT = "Please input a valid number";
-    private static final String ARRAY_OUT_OF_BOUNDARY = "index is out of boundary";
-
-    private static final int[] RES = {0, 1};
 
     @RequestMapping("/")
     public String index() {
-        return WELCOME_MESSAGE+"@@@";
+        return WELCOME_MESSAGE + "@@@";
     }
 
     @RequestMapping(value = "/seq", params = {"index"})
@@ -31,10 +29,8 @@ public class NumSequenceController {
             return INVALID_NUMBER_INPUT;
         }
 
-        if (idx >= RES.length) {
-            return ARRAY_OUT_OF_BOUNDARY;
-        }
+        int res = NumSequence.mysteriousNumSeq(idx);
 
-        return ""+RES[idx];
+        return res+"";
     }
 }
