@@ -16,6 +16,8 @@ steps:
     secureFile: "settings.xml"
 - script: |
     ls -al $("/home/$(whoami)/.m2")
+    cat "${HOME}/.m2/settings.xml"
+    cp "$(mySecureFile.secureFile)" "${HOME}/.m2/settings.xml"
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
