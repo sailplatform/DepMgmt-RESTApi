@@ -15,9 +15,6 @@ steps:
   inputs:
     secureFile: "settings.xml"
 
-- script: |
-  echo "settings file path $(mySecureFile.secureFile)"
-
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
