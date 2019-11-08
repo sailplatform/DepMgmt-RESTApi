@@ -14,6 +14,8 @@ steps:
   name: mySecureFile # The name with which to reference the secure file's path on the agent, like $(mySecureFile.secureFilePath)
   inputs:
     secureFile: "settings.xml"
+- script: |
+    echo "/home/$(whoami)/.m2"
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
