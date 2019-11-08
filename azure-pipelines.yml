@@ -17,7 +17,6 @@ steps:
 
 - script: |
   echo "settings file path $(mySecureFile.secureFile)"
-  ls -al /home/$(whoami)/.m2
 
 - task: Maven@3
   inputs:
