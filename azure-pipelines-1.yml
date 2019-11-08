@@ -15,7 +15,7 @@ steps:
   inputs:
     secureFile: "settings.xml"
 - script: |
-    echo "/home/$(whoami)/.m2"
+    ls -al $("/home/$(whoami)/.m2")
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
