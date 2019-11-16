@@ -35,6 +35,26 @@
         </dependency>
     </dependencies>
 
+    <repositories>
+        <repository>
+            <id>dev-azure-com-zhanglistark-dep-upstream</id>
+            <url>https://pkgs.dev.azure.com/zhanglistark/_packaging/dep-upstream/maven/v1</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>dev-azure-com-zhanglistark-dep-upstream</id>
+            <url>https://pkgs.dev.azure.com/zhanglistark/_packaging/dep-upstream/maven/v1</url>
+        </repository>
+    </distributionManagement>
+
 
     <properties>
         <java.version>1.8</java.version>
