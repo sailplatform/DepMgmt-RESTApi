@@ -14,7 +14,7 @@ public class NumSequenceController {
 
     @RequestMapping("/")
     public String index() {
-        return WELCOME_MESSAGE + "@@@";
+        return WELCOME_MESSAGE;
     }
 
     @RequestMapping(value = "/seq", params = {"index"})
