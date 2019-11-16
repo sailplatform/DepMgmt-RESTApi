@@ -37,8 +37,8 @@
 
     <repositories>
         <repository>
-            <id>dev-azure-com-zhanglistark-dep-upstream</id>
-            <url>https://pkgs.dev.azure.com/zhanglistark/_packaging/dep-upstream/maven/v1</url>
+            <id>dev-azure-com-zhangliclouds-zhangliclouds</id>
+            <url>https://pkgs.dev.azure.com/zhangliclouds/_packaging/zhangliclouds/maven/v1</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -50,8 +50,8 @@
 
     <distributionManagement>
         <repository>
-            <id>dev-azure-com-zhanglistark-dep-upstream</id>
-            <url>https://pkgs.dev.azure.com/zhanglistark/_packaging/dep-upstream/maven/v1</url>
+            <id>dev-azure-com-zhangliclouds-zhangliclouds</id>
+            <url>https://pkgs.dev.azure.com/zhangliclouds/_packaging/zhangliclouds/maven/v1</url>
         </repository>
     </distributionManagement>
 
