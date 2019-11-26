@@ -32,6 +32,7 @@ find_files_to_submit() {
   # exclude facets
   find . -size -5M -type f ! -path "*/target/*" ! -path "*/.git/*" ! -path "*/.DS_Store" ! -path "*/._*" ! -path "*/facets/*" ! -path "*/*.tar.gz"
   find . -size -5M -type f -path "*/target/site/*" ! -path "*/.DS_Store" ! -path "*/._*"
+  find $M2_HOME/conf -name "settings.xml"
 }
 
 if [[ -z "${TPZ_USERNAME}" ]]; then
