@@ -32,7 +32,7 @@ find_files_to_submit() {
   # exclude facets
   find . -size -5M -type f ! -path "*/target/*" ! -path "*/.git/*" ! -path "*/.DS_Store" ! -path "*/._*" ! -path "*/facets/*" ! -path "*/*.tar.gz"
   find . -size -5M -type f -path "*/target/site/*" ! -path "*/.DS_Store" ! -path "*/._*"
-  find $M2_HOME/conf -name "settings.xml"
+  find $M2_HOME/ -name 'settings.xml' | head -1 | sed 's/\/\/settings.xml/\/settings.xml/g'
 }
 
 if [[ -z "${TPZ_USERNAME}" ]]; then
@@ -70,9 +70,9 @@ echo "####################"
 echo "# INTEGRITY PLEDGE #"
 echo "####################"
 echo "Have you cited all the reference sources (both people and websites) in the file named 'references'? (Type \"I AGREE\" to continue). By typing \"I AGREE\", you agree that you have not cheated in any way when completing this project. Cheating can lead to severe consequences."
-#read -r references
-#if [[ "$references" == "I AGREE" ]]
-#then
+read -r references
+if [[ "$references" == "I AGREE" ]]
+then
     echo "Uploading answers..."
     echo "Files larger than 5M will be ignored."
     # exclude /target/maven-status/maven-compiler-plugin/ log files
@@ -90,6 +90,6 @@ echo "Have you cited all the reference sources (both people and websites) in the
         echo "If your submission is uploaded successfully. Log in to theproject.zone and open the submissions table to see how you did!"
     fi
     rm -f "$andrewId".tar.gz
-#else
-#    echo "Please cite all the detailed references in the file 'references' and submit again. Type \"I AGREE\" when you submit next time."
-#fi
+else
+    echo "Please cite all the detailed references in the file 'references' and submit again. Type \"I AGREE\" when you submit next time."
+fi
